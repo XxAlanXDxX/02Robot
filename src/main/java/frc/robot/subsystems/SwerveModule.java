@@ -38,8 +38,8 @@ public class SwerveModule {
         driveMotor = new CANSparkMax(driveMotorId, MotorType.kBrushless); //移動馬達
         turningMotor = new CANSparkMax(turningMotorId, MotorType.kBrushless); //轉動馬達
 
-        driveMotor.setIdleMode(IdleMode.kCoast); //移動馬達閒置時動作
-        turningMotor.setIdleMode(IdleMode.kCoast); //轉動馬達閒置時動作
+        driveMotor.setIdleMode(IdleMode.kCoast);
+        turningMotor.setIdleMode(IdleMode.kCoast);
 
         driveMotor.setInverted(driveMotorReversed);
         turningMotor.setInverted(turningMotorReversed);

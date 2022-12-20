@@ -19,11 +19,14 @@ import frc.robot.Constants.AutoConstants;
 import frc.robot.Constants.DriveConstants;
 import frc.robot.commands.ResetTuringmotor;
 import frc.robot.commands.SwerveJoystickCmd;
+import frc.robot.commands.ElevatorJoystickCmd;
 import frc.robot.subsystems.SwerveSubsystem;
+import frc.robot.subsystems.ElevatorSubsystem;
 
 public class RobotContainer {
 
     private final SwerveSubsystem m_swerveSubsystem = new SwerveSubsystem();
+    private final ElevatorSubsystem elevatorSubsystem = new ElevatorSubsystem();
 
     private final Joystick driverJoytick = new Joystick(GamepadJoystick.kDriverControllerPort);
 
@@ -39,7 +42,9 @@ public class RobotContainer {
     }
 
     private void configureButtonBindings() {
-         new JoystickButton(driverJoytick, 2).whenPressed(() -> swerveSubsystem.zeroHeading());
+        new JoystickButton(driverJoytick, 3).whenPressed(() -> SwerveSubsystem.zeroHeading());
+        new JoystickButton(driverJoytick, 4).whenPressed(() -> ElevatorJoystickCmd.ElevatorJoystickCmd(elevatorSubsystem, 10));
+        new JoystickButton(driverJoytick, 2).whenPressed(() -> ElevatorJoystickCmd.ElevatorJoystickCmd(elevatorSubsystem, -10));
     } 
 
     public Command getAutonomousCommand() {
