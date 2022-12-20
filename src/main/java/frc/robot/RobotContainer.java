@@ -43,8 +43,8 @@ public class RobotContainer {
 
     private void configureButtonBindings() {
         new JoystickButton(driverJoytick, 3).whenPressed(() -> SwerveSubsystem.zeroHeading());
-        new JoystickButton(driverJoytick, 4).whenPressed(() -> ElevatorJoystickCmd.ElevatorJoystickCmd(elevatorSubsystem, 10));
-        new JoystickButton(driverJoytick, 2).whenPressed(() -> ElevatorJoystickCmd.ElevatorJoystickCmd(elevatorSubsystem, -10));
+        new JoystickButton(driverJoytick, 4).whenPressed(() -> ElevatorJoystickCmd.ElevatorJoystickCmd(elevatorSubsystem, 10)); //上升
+        new JoystickButton(driverJoytick, 2).whenPressed(() -> ElevatorJoystickCmd.ElevatorJoystickCmd(elevatorSubsystem, -10)); //下降
     } 
 
     public Command getAutonomousCommand() {

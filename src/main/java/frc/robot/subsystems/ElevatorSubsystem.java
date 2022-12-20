@@ -25,7 +25,7 @@ public class ElevatorSubsystem extends SubsystemBase {
     }
 
     public void setMotor(double speed) {
-      elevatorRightMotor.set(speed);
-      elevatorLeftMotor.set(-speed);
+      elevatorRightMotor.set(speed); //升降
+      elevatorLeftMotor.set(-speed); //轉向與另一顆馬達相反
     }
 }
