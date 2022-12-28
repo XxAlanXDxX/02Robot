@@ -16,6 +16,12 @@ public class RobotMap {
         public static final int kBackLeftDriveAbsoluteEncoderPort = 11;
         public static final int kFrontRightDriveAbsoluteEncoderPort = 10;
         public static final int kBackRightDriveAbsoluteEncoderPort = 12;
+
+        public static final int kElevatorRightMotorPort = 13;
+        public static final int kElevatorLeftMotorPort = 14;
+        
+        public static final int kArmMotor1Port = 15;
+        public static final int kArmMotor2Port = 16;
     }
 
 }
